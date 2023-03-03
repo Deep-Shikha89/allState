@@ -15,12 +15,12 @@ curl -u "user:password" "http://localhost:8080/contacts/1"
 POST /contacts : To create new contact
 
  ```
-  curl -v -XPOST -H "Content-type: application/json" -d '[{"firstName":"first","lastName":"last","phoneNumbers":[{"countryCode":"+44","number":"1234567890"}],"addresses":[{"addressLine1":"7/8 980","addressLine2":"St Edmund Road","city":"Glasgow","country":"UK","pincode":"G86RG"}]}]' 'http://localhost:8080/contacts'
+  curl  -u "user:password"  -XPOST -H "Content-type: application/json" -d '[{"firstName":"first","lastName":"last","phoneNumbers":[{"countryCode":"+44","number":"1234567890"}],"addresses":[{"addressLine1":"7/8 980","addressLine2":"St Edmund Road","city":"Glasgow","country":"UK","pincode":"G86RG"}]}]' 'http://localhost:8080/contacts'
 ```
 
 PUT /contacts/{id} - To update contact by id
 ```aidl
- curl -v -X PUT -H "Content-Type: application/json" -d '{"firstName":"first","lastName":"lastOne","phoneNumbers":[{"countryCode":"+91","number":"1234567890"}],"addresses":[{"addressLine1":"7/8 980","addressLine2":"St Edmund Road","city":"Glasgow","country":"UK","pincode":"G86RG"}]}' 'http://localhost:8080/contacts/3'
+ curl  -u "user:password" -X PUT -H "Content-Type: application/json" -d '{"firstName":"first","lastName":"lastOne","phoneNumbers":[{"countryCode":"+91","number":"1234567890"}],"addresses":[{"addressLine1":"7/8 980","addressLine2":"St Edmund Road","city":"Glasgow","country":"UK","pincode":"G86RG"}]}' 'http://localhost:8080/contacts/3'
 ```
 DELETE /contact  - To delete contact
 
